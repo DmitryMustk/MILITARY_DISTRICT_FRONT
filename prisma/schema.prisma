@@ -1,0 +1,716 @@
+generator client {
+  provider        = "prisma-client-js"
+  binaryTargets   = ["native", "linux-musl-arm64-openssl-3.0.x"]
+  previewFeatures = ["fullTextSearchPostgres"]
+}
+
+datasource db {
+  provider          = "postgresql"
+  url               = env("DATABASE_URL")
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+model Provider {
+  id                 Int           @id @default(autoincrement())
+  organizationName   String        @map("organization_name") @db.VarChar(255)
+  representativeName String        @map("representative_name") @db.VarChar(255)
+  website            String?       @db.VarChar(512)
+  information        String        @db.VarChar(1000)
+  phone              String        @db.VarChar(32)
+  createdAt          DateTime      @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt          DateTime      @updatedAt @map("updated_at") @db.Timestamptz(6)
+  opportunities      Opportunity[]
+  userId             Int           @unique @map("user_id")
+  user               User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  blockedArtists     Artist[]
+
+  @@map("providers")
+}
+
+model Opportunity {
+  id                           Int                                   @id @default(autoincrement())
+  title                        String                                @db.VarChar(50)
+  providerId                   Int                                   @map("provider_id")
+  type                         OpportunityType
+  minGrantAmount               Int?                                  @map("min_grant_amount") // in dollars
+  maxGrantAmount               Int?                                  @map("max_grant_amount")
+  minResidencyTime             Int?                                  @map("min_residency_time")
+  maxResidencyTime             Int?                                  @map("max_residency_time")
+  residencyOffering            ResidencyOffering[]                   @map("residency_offering")
+  residencyOfferingDescription String?                               @map("residency_offering_description")
+  minAwardAmount               Int?                                  @map("min_award_amount")
+  maxAwardAmount               Int?                                  @map("max_award_amount")
+  awardSpecialAccess           String?                               @map("award_special_access")
+  description                  String                                @db.VarChar(1000)
+  applicationDeadline          DateTime                              @map("application_deadline") @db.Timestamptz(6)
+  responseDeadline             DateTime?                             @map("response_deadline") @db.Timestamptz(6)
+  legalStatus                  LegalStatus[]                         @map("legal_status")
+  minAge                       Int?                                  @map("min_age")
+  maxAge                       Int?                                  @map("max_age")
+  gender                       Gender[]
+  industry                     Industry[]
+  countryResidence             Country[]                             @map("country_residence")
+  countryCitizenship           Country[]                             @map("country_citizenship")
+  locationDescription          String?                               @map("location_description")
+  theme                        ArtTheme[]
+  themeDescription             String?                               @map("theme_description") @db.VarChar(300)
+  visibility                   OpportunityVisibility
+  createdAt                    DateTime                              @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt                    DateTime                              @updatedAt @map("updated_at") @db.Timestamptz(6)
+  provider                     Provider                              @relation(fields: [providerId], references: [id], onDelete: Cascade)
+  applications                 OpportunityApplication[]
+  invites                      OpportunityInvite[]
+  invitesUnregistered          OpportunityInviteUnregisteredArtist[]
+  attachments                  Json                                  @default("[]") @map("attachments")
+  banned                       Boolean                               @default(false)
+
+  @@index([type])
+  @@index([minGrantAmount])
+  @@index([maxGrantAmount])
+  @@index([minResidencyTime])
+  @@index([maxResidencyTime])
+  @@index([residencyOffering], type: Gin)
+  @@index([minAwardAmount])
+  @@index([maxAwardAmount])
+  @@index([applicationDeadline])
+  @@index([responseDeadline])
+  @@index([legalStatus], type: Gin)
+  @@index([minAge])
+  @@index([maxAge])
+  @@index([gender], type: Gin)
+  @@index([industry], type: Gin)
+  @@index([countryResidence], type: Gin)
+  @@index([countryCitizenship], type: Gin)
+  @@index([theme], type: Gin)
+  @@index([visibility])
+  @@index([providerId])
+  @@map("opportunities")
+}
+
+model OpportunityInvite {
+  id                  Int                                    @id @default(autoincrement())
+  artistId            Int                                    @map("artist_id")
+  opportunityId       Int                                    @map("opportunity_id")
+  message             String                                 @db.VarChar(16384)
+  status              OpportunityInviteStatus
+  createdAt           DateTime                               @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt           DateTime?                              @updatedAt @map("updated_at") @db.Timestamptz(6)
+  artist              Artist                                 @relation(fields: [artistId], references: [id], onDelete: Cascade)
+  opportunity         Opportunity                            @relation(fields: [opportunityId], references: [id], onDelete: Cascade)
+  notificationHistory OpportunityInviteNotificationHistory[]
+
+  @@unique([artistId, opportunityId])
+  @@index([artistId])
+  @@index([opportunityId])
+  @@map("opportunity_invites")
+}
+
+model Artist {
+  id                 Int                      @id @default(autoincrement())
+  firstName          String?                  @map("first_name") @db.VarChar(50)
+  lastName           String?                  @map("last_name") @db.VarChar(50)
+  bio                String?                  @db.VarChar(2000)
+  phone              String?                  @db.VarChar(30)
+  languages          Languages[]              @default([])
+  countryResidence   Country                  @map("country_residence")
+  countryCitizenship Country                  @map("country_citizenship")
+  links              String[]                 @db.VarChar(100)
+  industry           Industry[]               @default([])
+  title              ArtistTitle
+  active             Boolean                  @default(true)
+  createdAt          DateTime                 @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt          DateTime?                @updatedAt @map("updated_at") @db.Timestamptz(6)
+  projects           Project[]
+  userId             Int                      @unique @map("user_id")
+  user               User                     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  invites            OpportunityInvite[]
+  applications       OpportunityApplication[]
+  blockedProvider    Provider[]
+  theme              String[]                 @db.VarChar(100)
+  birthDay           DateTime                 @map("birth_day")
+  artistName         String?                  @map("artist_name") @db.VarChar(50)
+  statement          String                   @db.VarChar(2000)
+  moderationStatus   ModerationStatus         @map("moderation_status")
+  moderationComment  String                   @map("moderation_comment") @db.VarChar(1000)
+  moderatorId        Int?                     @map("moderator_id")
+  moderator          Moderator?               @relation(fields: [moderatorId], references: [id], onDelete: Cascade)
+  adminMark          AdminMark                @default(incomplete) @map("admin_mark")
+
+  @@index([birthDay])
+  @@index([languages], type: Gin)
+  @@index([countryResidence])
+  @@index([countryCitizenship])
+  @@index([theme], type: Gin)
+  @@index([industry], type: Gin)
+  @@map("artists")
+}
+
+model OpportunityApplication {
+  id            Int                          @id @default(autoincrement())
+  artistId      Int                          @map("artist_id")
+  applicant     Artist                       @relation(fields: [artistId], references: [id], onDelete: Cascade)
+  opportunityId Int                          @map("opportunity_id")
+  opportunity   Opportunity                  @relation(fields: [opportunityId], references: [id], onDelete: Cascade)
+  createdAt     DateTime                     @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt     DateTime                     @updatedAt @map("updated_at") @db.Timestamptz(6)
+  message       String                       @db.VarChar(2000)
+  projectId     Int?                         @map("project_id")
+  project       Project?                     @relation(fields: [projectId], references: [id], onDelete: SetNull)
+  status        OpportunityApplicationStatus
+  attachments   Json                         @default("[]") @map("attachments")
+
+  @@index([artistId])
+  @@index([opportunityId])
+  @@map("opportunity_applications")
+}
+
+model Project {
+  id                Int                      @id @default(autoincrement())
+  title             String                   @db.VarChar(200)
+  description       String                   @db.VarChar(1000)
+  tags              String[]                 @db.VarChar(30)
+  exclusiveSupport  Boolean                  @default(false) @map("exclusive_support")
+  hidden            Boolean                  @default(false)
+  artistId          Int                      @map("artist_id")
+  createdAt         DateTime                 @default(now()) @map("created_at") @db.Timestamptz
+  updatedAt         DateTime                 @updatedAt @map("updated_at") @db.Timestamptz
+  artist            Artist                   @relation(fields: [artistId], references: [id], onDelete: Cascade)
+  applications      OpportunityApplication[]
+  attachments       Json                     @default("[]") @map("attachments")
+  banned            Boolean                  @default(false)
+  reach             Int
+  budget            Int // in dollars
+  link              String?                  @db.VarChar(100)
+  posterImage       Json                     @default("{}") @map("poster_image")
+  moderationStatus  ModerationStatus         @map("moderation_status")
+  moderationComment String                   @map("moderation_comment") @db.VarChar(1000)
+  moderatorId       Int?                     @map("moderator_id")
+  moderator         Moderator?               @relation(fields: [moderatorId], references: [id], onDelete: Cascade)
+
+  @@index([budget])
+  @@index([reach])
+  @@index([tags], type: Gin)
+  @@index([artistId])
+  @@map("projects")
+}
+
+model Moderator {
+  id      Int       @id @default(autoincrement())
+  userId  Int       @unique @map("user_id")
+  user    User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  artist  Artist[]
+  project Project[]
+
+  @@map("moderators")
+}
+
+model User {
+  id              Int          @id @default(autoincrement())
+  email           String?      @unique @db.VarChar(255)
+  username        String       @unique @db.VarChar(64)
+  password        String?      @db.VarChar(512) // Must be non zero only if oauthExternalId != null
+  oauthExternalId String?      @unique @map("oauth_external_id") @db.VarChar(128)
+  locked          Boolean      @default(false)
+  role            Role[]
+  artist          Artist?
+  provider        Provider?
+  moderator       Moderator?
+  news            News[]
+  guides          Guide[]
+  urlHomePage     String?      @map("url_home_page") @db.VarChar(64)
+  StaticPage      StaticPage[]
+
+  @@index([oauthExternalId])
+  @@map("users")
+}
+
+model OpportunityInviteUnregisteredArtist {
+  id             Int          @id @default(autoincrement())
+  opportunityId  Int          @map("opportunity_id")
+  opportunity    Opportunity  @relation(fields: [opportunityId], references: [id], onDelete: Cascade)
+  message        String       @db.VarChar(255)
+  artistInvite   InviteArtist @relation(fields: [artistInviteId], references: [id], onDelete: Cascade)
+  artistInviteId String       @map("artist_invite_id")
+
+  @@index([opportunityId])
+  @@index([artistInviteId])
+  @@map("opportunity_invite_unregistered_artist")
+}
+
+model InviteArtist {
+  id                 String                                @id @db.VarChar(50)
+  oauthExternalId    String?                               @unique @map("oauth_external_id") @db.VarChar(128)
+  email              String                                @unique @db.VarChar(255)
+  createdAt          DateTime                              @default(now()) @map("created_at") @db.Timestamptz(6)
+  sentAt             DateTime?                             @map("sent_at") @db.Timestamptz(6)
+  opportunityInvites OpportunityInviteUnregisteredArtist[]
+  createdByArtist    Boolean                               @default(true) @map("created_by_artist")
+
+  @@index([email])
+  @@index([oauthExternalId])
+  @@map("invite_artist")
+}
+
+model InviteUser {
+  id               String   @id @db.VarChar(50)
+  organizationName String   @map("organization_name") @db.VarChar(255)
+  email            String   @db.VarChar(255)
+  createdAt        DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  messageSubject   String?  @db.VarChar(255)
+  message          String?  @db.VarChar(512)
+  roles            Role[]   @default([])
+
+  @@map("invite_user")
+}
+
+model News {
+  id             Int      @id @default(autoincrement())
+  title          String   @db.VarChar(255)
+  description    String?  @db.VarChar(1024)
+  blocks         String?
+  html           String?
+  mainPictureId  String?  @map("main_picture_id") @db.VarChar(128)
+  createdAt      DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  showAtNewsPage Boolean  @default(false) @map("at_news_page")
+  showAtHomePage Boolean  @default(false) @map("at_home_page")
+  uuid           String   @db.VarChar(36)
+  color          String   @default("#FFFFFF") @db.VarChar(8)
+
+  authorId Int  @map("author_id")
+  author   User @relation(fields: [authorId], references: [id], onDelete: Cascade)
+
+  @@index([createdAt])
+  @@map("news")
+}
+
+model Guide {
+  id           Int          @id @default(autoincrement())
+  title        String       @db.VarChar(255)
+  resourceType ResourceType
+  resource     Json         @default("{}")
+  order        Int          @default(0)
+  createdAt    DateTime     @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt    DateTime?    @updatedAt @map("updated_at") @db.Timestamptz(6)
+  authorId     Int?         @map("author_id")
+  author       User?        @relation(fields: [authorId], references: [id], onDelete: Cascade)
+
+  @@map("guides")
+}
+
+model StaticPage {
+  id        Int      @id @default(autoincrement())
+  slug      String   @unique @db.VarChar(255)
+  title     String?  @db.VarChar(255)
+  order     Int?
+  blocks    String?
+  html      String?
+  createdAt DateTime @default(now()) @db.Timestamptz(6)
+  updatedAt DateTime @updatedAt @db.Timestamptz(6)
+  uuid      String   @unique @db.VarChar(36)
+  authorId  Int
+  author    User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
+
+  @@map("static_pages")
+}
+
+model OpportunityInviteNotificationHistory {
+  id                  Int               @id @default(autoincrement())
+  opportunityInvite   OpportunityInvite @relation(fields: [opportunityInviteId], references: [id], onDelete: Cascade)
+  opportunityInviteId Int
+  createdAt           DateTime          @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@map("opportunity_invite_notification_history")
+}
+
+model PasswordResetRequest {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+}
+
+model EmailResetRequest {
+  id           String   @id @default(uuid())
+  currentEmail String   @unique
+  newEmail     String   @unique
+  createdAt    DateTime @default(now())
+}
+
+enum Role {
+  ARTIST
+  PROVIDER
+  MODERATOR
+  ADMINISTRATOR
+  CONTENT_MANAGER
+}
+
+enum Languages {
+  Armenian
+  English
+  Arabic
+  Chinese
+  Dutch
+  French
+  German
+  Hebrew
+  Hindi
+  Italian
+  Japanese
+  Korean
+  Portuguese
+  Spanish
+}
+
+enum OpportunityType {
+  grant
+  residency
+  award
+  mobility
+  commission
+  other
+}
+
+enum OpportunityVisibility {
+  nobody
+  invited
+  all
+}
+
+enum OpportunityApplicationStatus {
+  new
+  sent
+  shortlisted
+  rejected
+  archived
+  viewlater
+  archivedByArtist
+}
+
+enum OpportunityInviteStatus {
+  pending
+  accepted
+  rejected
+}
+
+enum LegalStatus {
+  individual
+  collective
+  organization
+}
+
+enum Gender {
+  male
+  female
+  other
+}
+
+enum Industry {
+  cultural_and_natural_heritage
+  performance_and_celebration
+  visual_arts_and_crafts
+  books_and_press
+  audiovisual_and_interactive_media
+  design_and_creative_services
+}
+
+enum ArtTheme {
+  identity
+  heritage
+  social_justice_and_inclusion
+  democracy_and_freedom_of_expression
+  conflict_resolution_and_peace_building
+  ecology
+  technology
+  youth
+  innovation
+  education
+}
+
+enum ResidencyOffering {
+  accommodation
+  transportation
+  workspace
+  allowance
+}
+
+enum ModerationStatus {
+  Draft
+  OnModeration
+  Approved
+  Denied
+}
+
+enum ResourceType {
+  LINK
+  FILE
+}
+
+enum ArtistTitle {
+  Artist
+  Curator
+  CulturalProducer
+}
+
+enum Country {
+  None
+  Abkhazia
+  Afghanistan
+  Aland_Islands
+  Albania
+  American_Samoa
+  Andorra
+  Angola
+  Anguilla
+  Antarctica
+  Antigua_And_Barbuda
+  Argentina
+  Armenia
+  Artsakh
+  Aruba
+  Australia
+  Austria
+  Azerbaijan
+  Bahamas
+  Bahrain
+  Bangladesh
+  Barbados
+  Belarus
+  Belgium
+  Belize
+  Benin
+  Bermuda
+  Bhutan
+  Bolivia
+  Bosnia_And_Herzegovina
+  Botswana
+  Bouvet_Island
+  Brazil
+  British_Indian_Ocean_Territory
+  British_Virgin_Islands
+  Brunei
+  Bulgaria
+  Burkina_Faso
+  Burundi
+  Cambodia
+  Cameroon
+  Canada
+  Cape_Verde
+  Caribbean_Netherlands
+  Cayman_Islands
+  Central_African_Republic
+  Chad
+  Chile
+  China
+  Christmas_Island
+  Cocos
+  Colombia
+  Comoros
+  Congo
+  Cook_Islands
+  Costa_Rica
+  Croatia
+  Cuba
+  Curacao
+  Cyprus
+  Czechia
+  Cote_d_Ivoire
+  Denmark
+  Djibouti
+  Dominica
+  Dominican_Republic
+  Ecuador
+  Egypt
+  El_Salvador
+  Equatorial_Guinea
+  Eritrea
+  Estonia
+  Eswatini
+  Ethiopia
+  Falkland_Islands
+  Faroe_Islands
+  Fiji
+  Finland
+  France
+  French_Guiana
+  French_Polynesia
+  French_Southern_Territories
+  Gabon
+  Gambia
+  Georgia
+  Germany
+  Ghana
+  Gibraltar
+  Greece
+  Greenland
+  Grenada
+  Guadeloupe
+  Guam
+  Guatemala
+  Guernsey
+  Guinea
+  Guinea_Bissau
+  Guyana
+  Haiti
+  Heard_And_McDonald_Islands
+  Hong_Kong_SAR_China
+  Hungary
+  Iceland
+  India
+  Indonesia
+  Iran
+  Iraq
+  Ireland
+  Isle_of_Man
+  Israel
+  Italy
+  Jamaica
+  Japan
+  Jersey
+  Jordan
+  Kazakhstan
+  Kenya
+  Kiribati
+  Kosovo
+  Kuwait
+  Kyrgyzstan
+  Laos
+  Latvia
+  Lebanon
+  Lesotho
+  Liberia
+  Libya
+  Liechtenstein
+  Lithuania
+  Luxembourg
+  Macao_SAR_China
+  Madagascar
+  Malawi
+  Malaysia
+  Maldives
+  Mali
+  Malta
+  Marshall_Islands
+  Martinique
+  Mauritania
+  Mauritius
+  Mayotte
+  Mexico
+  Micronesia
+  Moldova
+  Monaco
+  Mongolia
+  Montenegro
+  Montserrat
+  Morocco
+  Mozambique
+  Myanmar
+  Namibia
+  Nauru
+  Nepal
+  Netherlands
+  New_Caledonia
+  New_Zealand
+  Nicaragua
+  Niger
+  Nigeria
+  Niue
+  Norfolk_Island
+  North_Korea
+  North_Macedonia
+  Northern_Cyprus
+  Northern_Mariana_Islands
+  Norway
+  Oman
+  Pakistan
+  Palau
+  Palestinian_Territories
+  Panama
+  Papua_New_Guinea
+  Paraguay
+  Peru
+  Philippines
+  Pitcairn_Islands
+  Poland
+  Portugal
+  Puerto_Rico
+  Qatar
+  Romania
+  Russia
+  Rwanda
+  Reunion
+  Sahrawi_Arab_Democratic_Republic
+  Samoa
+  San_Marino
+  Saudi_Arabia
+  Senegal
+  Serbia
+  Seychelles
+  Sierra_Leone
+  Singapore
+  Sint_Maarten
+  Slovakia
+  Slovenia
+  Solomon_Islands
+  Somalia
+  Somaliland
+  South_Africa
+  South_Georgia_And_South_Sandwich_Islands
+  South_Korea
+  South_Ossetia
+  South_Sudan
+  Spain
+  Sri_Lanka
+  St_Barthelemy
+  St_Helena
+  St_Kitts_And_Nevis
+  St_Lucia
+  St_Martin
+  St_Pierre_And_Miquelon
+  St_Vincent_And_Grenadines
+  Sudan
+  Suriname
+  Svalbard_And_Jan_Mayen
+  Sweden
+  Switzerland
+  Syria
+  Sao_Tome_And_Principe
+  Taiwan
+  Tajikistan
+  Tanzania
+  Thailand
+  Timor_Leste
+  Togo
+  Tokelau
+  Tonga
+  Transnistria
+  Trinidad_And_Tobago
+  Tunisia
+  Turkey
+  Turkmenistan
+  Turks_And_Caicos_Islands
+  Tuvalu
+  US_Outlying_Islands
+  US_Virgin_Islands
+  Uganda
+  Ukraine
+  United_Arab_Emirates
+  United_Kingdom
+  United_States
+  Uruguay
+  Uzbekistan
+  Vanuatu
+  Vatican_City
+  Venezuela
+  Vietnam
+  Wallis_And_Futuna
+  Western_Sahara
+  Yemen
+  Zambia
+  Zimbabwe
+}
+
+enum AdminMark {
+  complete
+  incomplete
+  spam
+  need_attention
+}

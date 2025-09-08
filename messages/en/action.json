@@ -1,0 +1,79 @@
+{
+  "registerArtistByInvite": {
+    "usernameBusy": "Username already exists",
+    "emailBusy": "Email already exists"
+  },
+  "registerOauthArtistByInvite": {
+    "usernameBusy": "Username already exists",
+    "emailBusy": "Email already exists"
+  },
+  "inviteArtist": {
+    "artistExists": "An artist with this email already exists",
+    "emailTimeout": "The invitation has already been sent to this email. You can try again in {timeoutMinutes, plural, =1 {one minute} other {# minutes}}",
+    "emailError": "Unable to send the email. Please, try again later"
+  },
+  "sendProviderApplication": {
+    "adminMailNotSpecified": "ADMIN_MAILS is not specified",
+    "errorSubmit": "An error has occurred while submitting the application. Please, try again later",
+    "msgNewOpportunityProviderApplication": "\n\n Hooray! We have a new application from an opportunity provider!\n\nEmail: {email}\nOrganization: {organizationName}\nRepresentative: {representativeName}\nPhone: {phone}\n\n------------- Information ---------------\n\n{information}\n\n-----------------------------------------",
+    "opportunityProviderApplication": "Opportunity Provider Application"
+  },
+  "deleteOpportunityInvite": {
+    "failedDelete": "Unable to delete an invite that has already been accepted or declined"
+  },
+  "sendInvite": {
+    "inviteMessage": "Hello!\n\nPlease, follow the link to register with ASA:\n\n{inviteUrl}\n\nThanks!"
+  },
+  "defaultErrorMessage": "An error occurred. Please try again in a few moments.",
+  "sendUserInvite": {
+    "inviteMessageSubject": "ASA | Registration {messageSubject}",
+    "defaultInviteMessageSubject": "ASA | Registration Invitation for {role} role",
+    "inviteMessage": "Hello!\n\n{message}\n\nPlease, follow the link to register with ASA:\n\n{inviteUrl}\n\nThanks!",
+    "defaultInviteMessage": "Hello!\n\nPlease, follow the link to register with ASA:\n\n{inviteUrl}\n\nThanks!"
+  },
+  "resendInvitation": {
+    "invitationNotFound": "Invitation does not exist"
+  },
+  "sendResetEmail": {
+    "resetEmailMessageSubject": "ASA | Reset Your Password",
+    "resetEmailMessage": "Hello!\nWe received a request to reset your password.\n\nIf you made this request, please follow the link below to reset your password:\n\n{resetUrl}\n\nIf you did not request a password reset, please ignore this email.\n\nThanks!",
+    "cooldownError": "Please wait {formattedTime} before requesting another reset email."
+  },
+  "resetPassword": {
+    "samePasswordError": "New password cannot be the same as the old password"
+  },
+  "resetEmail": {
+    "requestNotExistError": "This email verification link is invalid or has expired.",
+    "someoneElseVerifyLinkError": "Email change failed: This link can only be used by the user who requested it."
+  },
+  "sendEmailVerification": {
+    "emailVerificationMessageSubject": "ASA | Verify Your New Email Address",
+    "verifyEmailMessage": "Hello!\nWe received a request to update your email address.\n\nIf you made this request, please follow the link below to verify your new email:\n\n{verificationUrl}\n\nIf you did not request this change, please ignore this email.\n\nThanks!"
+  },
+  "createOpportunityInvites": {
+    "inviteMessage": "Hello!\n\nYou have been invited to consider the opportunity!\n\nLink: {url}\n\nMessage from provider: {msg}\n\nThanks!"
+  },
+  "sendEmailProviderByApplicationId": {
+    "applicationMessage": "Hello!\n\nA new artist has responded to your opportunity\n\n{url}\n\nThanks!"
+  },
+  "createOpportunityInvitesUnregistered": {
+    "artistsWithEmailExist": "Artists with these emails exist: {emails}",
+    "invitesWithEmailExist": "Invites with these emails exist: {emails}",
+    "inviteMessageWithMaxAmount": "Hello!\n\nYou have been invited by the provider to implement the opportunity.\nThe provider is willing to sponsor you to implement its opportunity.\nDescription of the opportunity: \"{desc}\".\nMessage from provider: \"{msg}\".\nThe provider is ready to allocate up to {maxAmount}$.\n\nPlease, follow the link to register with ASA to contact with provider:\n\n{inviteUrl}\n\nThanks!",
+    "inviteMessageWithoutMaxAmount": "Hello!\n\nYou have been invited by the provider to implement the opportunity.\nThe provider is willing to sponsor you to implement its opportunity.\nDescription of the opportunity: \"{desc}\".\nMessage from provider: \"{msg}\".\n\nPlease, follow the link to register with ASA to contact with provider:\n\n{inviteUrl}\n\nThanks!",
+    "asa": "ASA company"
+  },
+  "deleteOpportunityInviteUnregistered": {
+    "inviteCancelled": "Hello!\n\nYour invitation has been canceled by the provider."
+  },
+  "signIn": {
+    "unverifiedEmail": "Failed to sign in due to an unverified email.",
+    "emptyEmail": "Failed to sign in due to an empty email."
+  },
+  "notifyArtistsOpportunityInvite": {
+    "msg": "Hello!\n\nWe remind you that provider has sent you opportunity invite with title \"{title}\".\nResponse time: {deadline}\nDays left until decision: {day}.\n\nPlease, follow the link to explore the possibility:\n\n{inviteUrl}\n\nThanks!"
+  },
+  "createArtistOpportunityInvites": {
+    "inviteMessage": "Hello!\n\nYou have been invited to consider the opportunity!\n\nLink: {url}\n\nMessage from provider: {msg}\n\nThanks!"
+  }
+}

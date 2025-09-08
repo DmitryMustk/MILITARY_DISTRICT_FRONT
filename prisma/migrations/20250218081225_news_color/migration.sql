@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "news" ADD COLUMN     "color" VARCHAR(8) NOT NULL DEFAULT '#FFFFFF';

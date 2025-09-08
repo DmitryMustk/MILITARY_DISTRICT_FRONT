@@ -1,0 +1,872 @@
+{
+  "ButtonWithConfirm": {
+    "defaultDeleteLabel": "Delete",
+    "defaultDeleteCancel": "No, don't delete",
+    "defaultDeleteConfirm": "Yes, delete"
+  },
+  "ProjectCard": {
+    "reviewMessage": "Review Message",
+    "description": "Description",
+    "reach": "Audience reach",
+    "budget": "Budget",
+    "link": "Link"
+  },
+  "ArtistProjectCard": {
+    "bannedStatus": "The project has been hidden by an administrator",
+    "hiddenStatus": "The project is hidden",
+    "approvedStatus": "The project has been verified by a moderator. It has been published",
+    "draftStatus": "The project has not been sent to the moderator yet",
+    "onModerationStatus": "The project has been sent to the moderator",
+    "deniedStatus": "The project has been reviewed and denied by a moderator. Please check the moderator's comment.",
+    "projectDeleted": "Project successfully deleted",
+    "projectSubmittedReview": "The project has been submitted for moderation",
+    "status": "Status",
+    "reviewMessage": "Moderator message",
+    "description": "Description",
+    "update": "Update",
+    "sendToModeration": "Send to moderation",
+    "deleteLabel": "Delete",
+    "deleteCancel": "No, don't delete",
+    "deleteConfirm": "Yes, delete",
+    "budget": "Budget",
+    "reach": "Reach",
+    "link": "Link",
+    "projectWithApplicationsWarning": "This project has associated application(s) that will also be deleted",
+    "tags": "Tags"
+  },
+  "Tags": {
+    "tags": "Tags",
+    "delete": "Delete",
+    "addTag": "Add Tag"
+  },
+  "ProjectForm": {
+    "projectCreated": "Project successfully created",
+    "projectUpdated": "Project successfully updated",
+    "title": "Title",
+    "description": "Description",
+    "exclusiveSupport": "Exclusive Support",
+    "exclusiveSupportDescription": "Are you looking for exclusive support from a single source?",
+    "hidden": "Hidden",
+    "hiddenDescription": "Hide the project. No one will see it.",
+    "sending": "Sending...",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "attachments": "Attachments",
+    "addAttachments": "Add new attachment",
+    "budget": "Budget",
+    "budgetDesc": "Describe the expected project budget in dollars",
+    "reach": "Reach",
+    "reachDesc": "Describe the expected reach of the project",
+    "link": "Link",
+    "posterImage": "Poster image",
+    "uploadPosterImage": "Upload poster image",
+    "updateProjectTitle": "Update Project",
+    "updateProjectWarning": "If you update the project, your application will be suspended until the moderator approves it.",
+    "addProjectTitle": "Add a New Project"
+  },
+  "ArtistRegistrationForm": {
+    "step": "STEP {step}/4",
+    "registrationFinished": "Registration completed successfully",
+    "registrationFinishedDesc": "Please sign in to continue",
+    "failedRegister": "Failed to register",
+    "profile": "Profile customization",
+    "professional": "Professional information",
+    "personal": "Personal information",
+    "account": "Account information"
+  },
+  "ArtistRegistrationOAuthForm": {
+    "fillFields": "Fill in the fields to register",
+    "registrationFinished": "Registration completed successfully",
+    "registrationFinishedDesc": "Please sign in to continue",
+    "failedRegister": "Failed to register",
+    "profile": "Profile Customization",
+    "professional": "Professional Information",
+    "personal": "Personal Information",
+    "account": "Account"
+  },
+  "ProviderRegistrationForm": {
+    "registrationFinished": "Registration completed successfully",
+    "registrationFinishedDesc": "Please sign in to continue",
+    "username": "Username",
+    "password": "Password",
+    "passwordConfirmation": "Password Confirmation",
+    "organizationName": "Organization name",
+    "representativeName": "Representative name",
+    "shortInformation": "Short information",
+    "website": "Website (optional)",
+    "email": "Email",
+    "phone": "Phone",
+    "signUp": "Sign Up",
+    "step": "STEP {step}/2",
+    "professional": "Professional information",
+    "account": "Account information",
+    "next": "Next",
+    "back": "Back"
+  },
+  "SignInForm": {
+    "username": "Username",
+    "password": "Password",
+    "signIn": "Вход",
+    "invalidUsernamePassword": "The username and password combination is not valid",
+    "successfullyAuthenticated": "You have been successfully authenticated",
+    "forgotPassword": "Forgot Password?"
+  },
+  "ForgotPasswordForm": {
+    "email": "Email",
+    "submit": "Send reset link",
+    "emailSent": "Check your email",
+    "emailSentDesc": "We have sent you a password reset link."
+  },
+  "ArtistInvitationDialog": {
+    "registerButton": "Register an account",
+    "registerAsArtist": "Register as an artist",
+    "writeEmail": "Enter your email to register. Next, confirm your email.",
+    "close": "Close"
+  },
+  "ArtistInvitationForm": {
+    "inviteSent": "Invitation successfully sent",
+    "inviteSentDesc": "Please check your email to confirm the registration",
+    "email": "Email",
+    "sending": "Sending...",
+    "sendInvitation": "Send invitation"
+  },
+  "FormFieldsAttachments": {
+    "securityIssue": "Security issue",
+    "securityIssueDesc": "You are not permitted to upload files here",
+    "failedUpload": "File upload error",
+    "failedUploadDesc": "Can't upload file.",
+    "fatalUpload": "File upload error",
+    "fatalUploadDesc": "Can't upload file: {msg}",
+    "attachmentType": "Attachment type"
+  },
+  "AttachmentImage": {
+    "securityIssue": "Security issue",
+    "securityIssueDesc": "You are not permitted to upload an image here",
+    "failedUpload": "Image upload error",
+    "failedUploadDesc": "Can't upload image.",
+    "fatalUpload": "Image upload error",
+    "fatalUploadDesc": "Can't upload image: {msg}"
+  },
+  "ProviderApplicationDialog": {
+    "becomeProvider": "Become an Opportunity Provider",
+    "sendApplication": "Submit an application to become an Opportunity Provider",
+    "providerDesc": "Opportunity Providers are organizations or individuals that provide opportunities for artists. If you are ready to connect with the artists' community through our platform, please fill out the form and submit an application.",
+    "close": "Close"
+  },
+  "ProviderApplicationForm": {
+    "applicationSent": "Application successfully sent",
+    "applicationSentDesc": "Our managers will contact you",
+    "email": "Email",
+    "phone": "Phone",
+    "representativeName": "Representative name",
+    "organizationName": "Organization name",
+    "information": "Information",
+    "submit": "Submit the application"
+  },
+  "OpportunityCard": {
+    "visibility": {
+      "nobody": "Private",
+      "invited": "By invitation",
+      "all": "Public"
+    },
+    "pending": "Pending",
+    "accepted": "Accepted",
+    "rejected": "Rejected",
+    "archivedByArtist": "Archived by Artist",
+    "banned": "This opportunity has been hidden by an administrator",
+    "provider": "Provider:",
+    "minGrantAmount": "Minimum amount: ",
+    "maxGrantAmount": "Maximum amount: ",
+    "minResidencyTime": "Minimum time: ",
+    "maxResidencyTime": "Maximum time: ",
+    "weeks": "{weeks, plural, one {# week} other {# weeks}}",
+    "residencyOffering": "Residency offering: ",
+    "residencyOfferingDescription": "Other residency offerings: ",
+    "minAwardAmount": "Minimum amount: ",
+    "maxAwardAmount": "Maximum amount: ",
+    "awardSpecialAccess": "Special access: ",
+    "applicationDeadline": "Application deadline:",
+    "responseDeadline": "Response deadline:",
+    "legalStatus": "Legal status",
+    "minAge": "Minimum age:",
+    "maxAge": "Maximum age:",
+    "gender": "Gender",
+    "industry": "Industry",
+    "residenceCountry": "Country of residence",
+    "citizenshipCountry": "Country of citizenship",
+    "locationLimitations": "Other location limitations:",
+    "themes": "Theme(s)",
+    "themeLimitations": "Other theme limitations:"
+  },
+  "OpportunityForm": {
+    "title": "Title *",
+    "opportunityType": "Opportunity type",
+    "grant": "Grant",
+    "residency": "Residency",
+    "award": "Award/Prize",
+    "mobility": "Mobility",
+    "commission": "Commission",
+    "other": "Other (Describe)",
+    "minGrantAmount": "Minimum grant amount",
+    "maxGrantAmount": "Maximum grant amount",
+    "minResidencyTime": "Minimum residency time *",
+    "maxResidencyTime": "Maximum residency time *",
+    "residencyOffering": "Residency offering",
+    "residencyOfferingDescription": "Other residency offerings",
+    "minAwardAmount": "Minimum award amount",
+    "maxAwardAmount": "Maximum award amount",
+    "awardSpecialAccess": "Special access",
+    "description": "Description *",
+    "legalStatus": "Legal status",
+    "minAge": "Minimum age",
+    "maxAge": "Maximum age",
+    "gender": "Gender",
+    "industry": "Industry",
+    "residenceCountry": "Country of residence",
+    "citizenshipCountry": "Country of citizenship",
+    "locationLimitations": "Other location limitations",
+    "themes": "Theme",
+    "themeLimitations": "Other theme limitations",
+    "noLimitationPlaceholder": "No limitation",
+    "applicationDeadline": "Application deadline *",
+    "responseDeadline": "Response deadline",
+    "whoCanSee": {
+      "nobody": "Who can see it?: Nobody",
+      "invited": "Who can see it?: Only invited artists",
+      "all": "Who can see it?: All"
+    },
+    "attachments": "Attachments",
+    "addAttachments": "Add a new attachment",
+    "submit": "Submit",
+    "deleteLabel": "Delete",
+    "deleteCancel": "No, don't delete",
+    "deleteConfirm": "Yes, delete",
+    "cancel": "Cancel",
+    "residencyTimePlaceholder": "Number of weeks"
+  },
+  "OpportunitySearchForm": {
+    "fullTextSearch": "Full text search",
+    "showAllTypes": "Show all types",
+    "showAll": "Show all",
+    "grantsOnly": "Grants only",
+    "nonGrantsOnly": "Non-grants only",
+    "invites": "Invites",
+    "in-progress": "In progress",
+    "amountFrom": "Amount from",
+    "amountTo": "Amount to",
+    "residencyTime": "Residency time",
+    "residencyOffering": "Residency offering",
+    "awardFrom": "Award from",
+    "awardTo": "Award to",
+    "deadlineAfter": "Application after",
+    "deadlineBefore": "Application before",
+    "legalStatus": "Legal status",
+    "age": "Age",
+    "gender": "Gender",
+    "industry": "Industry",
+    "residenceCountry": "Country of residence",
+    "citizenshipCountry": "Country of citizenship",
+    "theme": "Theme",
+    "expandFilters": "Expand filters",
+    "collapseFilters": "Collapse filters",
+    "showFilter": "Show filters",
+    "hideFilter": "Hide filters",
+    "opportunityType": "Opportunity type",
+    "mode": "Mode"
+  },
+  "OpportunityApplicationForm": {
+    "archiveCancel": "No, don't archive",
+    "archiveConfirm": "Yes, archive",
+    "archiveLabel": "Archive",
+    "archived": "Archived",
+    "archivedDesc": "Your application has been archived",
+    "sent": "Sent",
+    "sentDesc": "Your application has been sent",
+    "failedSendEmail": "YourApplication was successfully sent. Failed to send email to provider",
+    "revoked": "Revoked",
+    "revokedDesc": "Your application has been revoked",
+    "message": "Message to the Opportunity Provider *",
+    "save": "Save",
+    "submit": "Submit",
+    "sendLabel": "Send to the Opportunity Provider",
+    "sendCancel": "No, don't send",
+    "sendConfirm": "Yes, send",
+    "revokeLabel": "Revoke the application",
+    "revokeCancel": "Don't revoke",
+    "revokeConfirm": "Yes, revoke",
+    "deleteLabel": "Delete",
+    "deleteCancel": "No, don't delete",
+    "deleteConfirm": "Yes, delete",
+    "goBack": "Go back",
+    "attachments": "Attachments",
+    "addAttachments": "Add a new attachment",
+    "project": "Project",
+    "projectPlaceholder": "Select your project",
+    "unarchiveCancel": "No, do not restore",
+    "unarchiveConfirm": "Yes, restore from the archive",
+    "unarchiveLabel": "Unarchive",
+    "unarchived": "Unarchived",
+    "unarchivedDesc": "Your application has been restored from the archive",
+    "warningSendingIsBlocked": "Your profile must be approved by a moderator before you can send applications"
+  },
+  "ApplicationCard": {
+    "applicationTo": "Application to",
+    "edit": "Edit",
+    "projectIsBanned": "Banned project",
+    "projectIsDraft": "Draft project",
+    "projectIsOnModeration": "Project pending moderation",
+    "message": "Message",
+    "status": "Status"
+  },
+  "OpportunityInviteCard": {
+    "notImplemented": "Not implemented",
+    "cancelInvitation": "Cancel invitation",
+    "rejected": "Rejected",
+    "viewApplication": "View application"
+  },
+  "OpportunityInviteForm": {
+    "next": "Next",
+    "invite": "Invite",
+    "back": "Back",
+    "cancel": "Cancel",
+    "messageMaxLen": "Message must be shorter than {maxLen} characters",
+    "successfullyInvited": "Successfully invited"
+  },
+  "OpportunityInviteArtistCard": {
+    "alreadyInvited": "Already invited",
+    "notImplemented": "Not implemented",
+    "rejected": "Rejected",
+    "viewApplication": "View application",
+    "cancelInvitation": "Cancel invitation"
+  },
+  "OpportunityInviteArtistStep": {
+    "selectArtists": "Select an artist to invite"
+  },
+  "OpportunityInviteMessageCard": {
+    "customMessage": "Custom message",
+    "cancel": "Cancel invitation"
+  },
+  "OpportunityInviteMessageStep": {
+    "message": "Message"
+  },
+  "ProviderProfileForm": {
+    "updated": "Updated successfully",
+    "updatedDesc": "Your profile has been successfully saved",
+    "organizationName": "Organization name *",
+    "representativeName": "Representative name *",
+    "shortInformation": "Short information *",
+    "website": "Website",
+    "phone": "Phone *",
+    "save": "Save"
+  },
+  "UserSearchForm": {
+    "emailSearch": "Email",
+    "usernameSearch": "Username",
+    "roleSearch": "Roles",
+    "locked": "Locked"
+  },
+  "ArtistSearchForm": {
+    "artistSearch": "Artist full text search",
+    "projectSearch": "Project full text search",
+    "selectArtistLanguage": "Artist's language",
+    "selectCountryResidence": "Artist's country of residence",
+    "selectArtistTheme": "Artist's theme",
+    "fromAgePlaceholder": "Minimum age of the artist",
+    "toAgePlaceholder": "Maximum age of the artist",
+    "selectCountryCitizenship": "Artist's country of citizenship",
+    "selectIndustry": "Artist's industry",
+    "selectMinimumAudience": "Minimum audience of the project",
+    "selectMaximumAudience": "Maximum audience of the project",
+    "budget": "Project budget restrictions"
+  },
+  "AccountMenu": {
+    "signIn": "Вход",
+    "projects": "Projects",
+    "editProfile": "Edit profile",
+    "applications": "My applications",
+    "invites": "Invites",
+    "myOpportunities": "My Opportunities",
+    "signOut": "Sign out",
+    "manageInvitations": "Manage Invitations",
+    "bannedOpportunities": "Banned Opportunities",
+    "dashboard": "Dashboard",
+    "manageUsers": "Manage Users",
+    "bannedProjects": "Banned Projects",
+    "manageNews": "Manage News",
+    "manageGuides": "Manage Guides",
+    "managePages": "Manage Pages",
+    "registration": "Registration",
+    "securitySettings": "Account Settings",
+    "moderation": "Moderation",
+    "bannedArtists": "Blocked artists"
+  },
+  "Footer": {
+    "copyright": "© 2025 Southern Military District. All rights reserved."
+  },
+  "NavMenu": {
+    "asaArmenia": "ASA",
+    "mainMenu": "Main menu",
+    "home": "HOME",
+    "forces": "ФОРМИРОВАНИЯ",
+    "manpower": "СОСТАВ",
+    "equipment": "ОБОРУДОВАНИЯ",
+    "infrastructure": "ИНФРАСТРУКТУРА",
+    "analytics": "АНАЛИТИКА",
+    "more": "ЕЩЕ"
+  },
+  "ArtistProfileForm": {
+    "step": "STEP {step}/4",
+    "successfullyUpdated": "Profile updated successfully",
+    "personal": "Personal information",
+    "professional": "Professional information",
+    "profile": "Profile customization"
+  },
+  "ArtistPasswordForm": {
+    "password": "Password",
+    "passwordConfirmation": "Password Confirmation",
+    "update": "Update",
+    "backProfile": "Back to Profile"
+  },
+  "ProviderPasswordForm": {
+    "password": "Password",
+    "passwordConfirmation": "Password Confirmation",
+    "update": "Update",
+    "backSettings": "Back to Settings",
+    "updated": "Updated",
+    "updatedDesc": "The new password was successfully saved"
+  },
+  "UpdatePasswordForm": {
+    "password": "Password",
+    "passwordConfirmation": "Password Confirmation",
+    "update": "Update",
+    "backSettings": "Back to Settings",
+    "updated": "Updated",
+    "updatedDesc": "The new password was successfully saved"
+  },
+  "UpdateEmailForm": {
+    "email": "New email",
+    "sendMessage": "Send confirmation message",
+    "backSettings": "Back to Settings",
+    "emailSent": "Email Sent",
+    "emailSentDesc": "A verification email has been sent to your new email address.",
+    "emailSentError": "Error",
+    "emailSentErrorDesc": "Something went wrong. Please try again later.",
+    "sending": "Sending...",
+    "resendCooldown": "Resend in {time}",
+    "resendHint": "You can request a new email in:"
+  },
+  "ResetPasswordForm": {
+    "password": "Password",
+    "passwordConfirmation": "Password Confirmation",
+    "update": "Update"
+  },
+  "UserInvitationDialog": {
+    "triggerButton": "Create a new invitation",
+    "title": "New User Invitation",
+    "description": "The invitation allows the user to register with the selected roles",
+    "closeButton": "Close"
+  },
+  "UserInvitationForm": {
+    "organizationNameLabel": "Organization name",
+    "emailLabel": "Email",
+    "rolesLabel": "Roles",
+    "messageSubjectLabel": "Message subject",
+    "messageLabel": "Message to the user",
+    "submitButton": "Send invitation",
+    "submitButtonPending": "Sending...",
+    "successToastTitle": "Invitation successfully sent"
+  },
+  "ProviderInvitationResendButton": {
+    "buttonText": "Send again",
+    "successToastTitle": "Invitation has been sent"
+  },
+  "ProviderInvitationRevokeButton": {
+    "buttonText": "Revoke",
+    "successToastTitle": "Invitation has been revoked"
+  },
+  "ProviderOpportunityApplicationSearchForm": {
+    "messageSearch": "Message full text search",
+    "projectDescriptionSearch": "Project description full text search",
+    "selectProjectStatus": "Project status",
+    "applicantNameSearch": "Applicant's name full text search",
+    "selectOpportunity": "Opportunities",
+    "showBlockApplicants": "Show blocked applicants",
+    "showFilter": "Show filters",
+    "hideFilter": "Hide filters"
+  },
+  "ProviderApplicationCard": {
+    "applicant": "Applicant",
+    "blockedApplicant": "Blocked applicant",
+    "messageApplicant": "Message from applicant",
+    "emailApplicant": "Applicant's email",
+    "phoneApplicant": "Applicant's phone",
+    "countryResidenceApplicant": "Applicant's country of residence",
+    "linksApplicant": "Applicant's links",
+    "projectTitle": "Project title",
+    "projectDesc": "Project description",
+    "archived": "Archived",
+    "rejected": "Rejected",
+    "sent": "Sent",
+    "shortlisted": "Shortlisted",
+    "viewLater": "View later",
+    "shortlist": "Shortlist",
+    "removeShortlist": "Remove from shortlist",
+    "archive": "Archive",
+    "unarchive": "Unarchive",
+    "markViewLater": "Mark as view later",
+    "removeViewLater": "Remove from view later",
+    "rejectLabel": "Reject",
+    "rejectCancel": "No",
+    "rejectConfirmBlockApplicant": "Yes, reject and block applicant",
+    "rejectConfirm": "Yes, reject",
+    "removeRejectedLabel": "Remove from rejected",
+    "removeRejectedAndUnblockLabel": "Remove from rejected and unblock applicant",
+    "removeRejectedCancel": "No",
+    "removeRejectedConfirm": "Yes, remove from rejected",
+    "removeRejectedAndUnblockConfirm": "Yes, remove from rejected and unblock applicant",
+    "unBlockArtistLabel": "Unblock applicant",
+    "unBlockArtistCancel": "No",
+    "unBlockArtistConfirm": "Yes, unblock applicant",
+    "artistUnblocked": "Artist successfully unblocked",
+    "statusChanged": "Status successfully changed",
+    "reach": "Audience reach",
+    "opportunityLockedByAdmin": "Opportunity is locked by admin"
+  },
+  "ArtistInviteCard": {
+    "createOpportunityApplication": "Create Opportunity Application",
+    "message": "Message",
+    "description": "Description",
+    "applicationDeadline": "Application deadline",
+    "responseDeadline": "Response deadline",
+    "budget": "Budget",
+    "from": "From",
+    "to": "To",
+    "period": "Period",
+    "fromWeeks": "From {weeks, plural, one {# week} other {# weeks}}",
+    "toWeeks": "To {weeks, plural, one {# week} other {# weeks}}",
+    "award": "Award/Prize",
+    "status": "Status",
+    "opportunityType": "Opportunity type"
+  },
+  "OpportunityInviteUnregisteredArtistForm": {
+    "invites": "Invites",
+    "deleteInvite": "Delete invite",
+    "cancel": "Cancel",
+    "addInvite": "Add invite",
+    "send": "Send",
+    "next": "Next",
+    "prev": "Prev",
+    "generalMessage": "Message",
+    "customMessage": "Custom message",
+    "message": "Message",
+    "invitesSent": "Invitations successfully created and sent",
+    "failedSend": "Failed to create invitations",
+    "generalSubject": "Subject"
+  },
+  "OpportunityInviteUnregisteredArtistCard": {
+    "customMessage": "Custom message",
+    "customSubject": "Custom subject"
+  },
+  "OpportunityInviteUnregisteredCard": {
+    "unregisteredArtist": "Unregistered artist",
+    "email": "Email",
+    "delete": "Delete"
+  },
+  "NewsForm": {
+    "title": "News Title",
+    "description": "News Description",
+    "save": "Save",
+    "submit": "Submit",
+    "deleteCancel": "No, don't delete",
+    "deleteConfirm": "Yes, delete",
+    "deleteLabel": "Delete",
+    "goBack": "Go back",
+    "createdAt": "News Date",
+    "text": "News Text",
+    "securityIssue": "Security issue",
+    "securityIssueDesc": "You are not permitted to upload files here",
+    "failedUpload": "File upload error",
+    "failedUploadDesc": "Can't upload picture",
+    "fatalUpload": "File upload error",
+    "fatalUploadDesc": "Can't upload file: {msg}",
+    "mainImage": "News Image",
+    "showAtNewsPage": "Visible on the news page",
+    "showAtNewsPageDescr": "Show this news on the news page",
+    "showAtHomePage": "Present on the home page",
+    "showAtNomePageDescr": "Show this news on the home page"
+  },
+  "NewsCard": {
+    "published": "Published",
+    "atHome": "On Home Page",
+    "edit": "Edit",
+    "preview": "Preview",
+    "noimage": "No Image"
+  },
+  "UserLockUnlockButton": {
+    "lock": "Lock",
+    "unlock": "Unlock"
+  },
+  "ArtistAccountStep": {
+    "password": "Password *",
+    "passwordPlaceholder": "Password must be between 12 and 30 characters long",
+    "passwordConfirmation": "Password Confirmation *",
+    "username": "Username *",
+    "next": "Next"
+  },
+  "ArtistOAuthAccountStep": {
+    "password": "Password *",
+    "passwordPlaceholder": "Password must be between 12 and 30 characters long",
+    "passwordConfirmation": "Password Confirmation *",
+    "username": "Username *",
+    "next": "Next"
+  },
+  "ArtistPersonalInformationFormStep": {
+    "next": "Next",
+    "back": "Back",
+    "backLink": "Back to profile",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "phoneNumber": "Phone Number",
+    "countryCitizenship": "Country of Citizenship",
+    "countryCitizenshipDesc": "Country of your citizenship",
+    "countryResidence": "Country of Residence",
+    "countryResidenceDesc": "Your current country of residence",
+    "dateBirth": "Date of birth *",
+    "pickDate": "Pick a date",
+    "dateBirthDesc": "Date of birth is used to calculate your age",
+    "moderationWarning": "When you edit your profile, it will be hidden with your projects and applications until they pass moderation"
+  },
+  "ArtistProfessionalAccountStep": {
+    "next": "Next",
+    "back": "Back",
+    "none": "None",
+    "backLink": "Back to profile",
+    "languages": "Languages",
+    "industry": "Industry",
+    "title": "Title *",
+    "theme": "Theme",
+    "themesDesc": "Select the topic of your activity",
+    "moderationWarning": "When you edit your profile, it will be hidden with your projects and applications until they pass moderation"
+  },
+  "ArtistProfileStep": {
+    "back": "Back",
+    "prev": "Previous",
+    "backLink": "Back to profile",
+    "statement": "Statement",
+    "statementDesc": "Make a statement that describes you",
+    "addLink": "Add Link",
+    "bio": "Bio",
+    "links": "Links",
+    "artistName": "Artist name",
+    "submit": "Submit",
+    "moderationWarning": "When you edit your profile, it will be hidden with your projects and applications until they pass moderation"
+  },
+  "ArtistCardHeader": {
+    "unknown": "Unknown artist name"
+  },
+  "ArtistCard": {
+    "artist": "Artist",
+    "bio": "Bio",
+    "languages": "Languages",
+    "email": "Email",
+    "phone": "Phone",
+    "industry": "Industry",
+    "countryResidence": "Country of Residence",
+    "links": "Links",
+    "unknownName": "Unknown name",
+    "statement": "Statement"
+  },
+  "ArtistCardFull": {
+    "unknownName": "Unknown name",
+    "artistProfile": "Artist Profile",
+    "moderationStatusTitle": "Status",
+    "moderationStatusReason": "Moderator Message",
+    "profileComplete": "Profile Completeness Percentage",
+    "email": "Email",
+    "bio": "Bio",
+    "phone": "Phone",
+    "languages": "Languages",
+    "industry": "Industry",
+    "links": "Links",
+    "dateOfRegistration": "Date of Registration",
+    "postedProject": "Number of Published Projects",
+    "activeApplications": "Number of Active Applications",
+    "submittedApplicationsLastWeek": "Number of Applications Submitted This Week",
+    "submittedApplicationsLastMonth": "Number of Applications Submitted This Month",
+    "submittedApplicationsLastYear": "Number of Applications Submitted This Year",
+    "lastOpenApplication": "Days Since Oldest Artist Application Opened",
+    "goProjects": "Projects",
+    "backArtists": "Back to Artists",
+    "updateProfile": "Update Profile",
+    "lockedByAdmin": "Locked by admin",
+    "artistHasOldApplication": "The artist has an old open application",
+    "draftStatus": "Draft",
+    "onModerationStatus": "On Moderation",
+    "approvedStatus": "Approved by moderator",
+    "deniedStatus": "Denied by moderator",
+    "registerAsProvider": "Want to contact the artist? Register now as an opportunity provider"
+  },
+  "ProviderCard": {
+    "information": "Information",
+    "phone": "Phone"
+  },
+  "ArtistProjectViewerSwitcher": {
+    "artistsOnly": "Artists",
+    "projectsOnly": "Projects"
+  },
+  "CalendarButton": {
+    "defaultPlaceholder": "Select date",
+    "dialogTitle": "Select date",
+    "clearButton": "Clear date",
+    "closeButton": "Close"
+  },
+  "ArtistOpportunityInviteForm": {
+    "successfullyInvited": "Successfully invited",
+    "next": "Next",
+    "back": "Back",
+    "invite": "Invite",
+    "cancel": "Cancel",
+    "messageMaxLen": "Message must be shorter than {maxLen} characters"
+  },
+  "OpportunityInviteOpportunityStep": {
+    "selectOpportunity": "Select opportunities"
+  },
+  "OpportunityInviteOpportunityCard": {
+    "alreadyInvited": "Already invited"
+  },
+  "ArtistOpportunityInviteMessageStep": {
+    "message": "Message"
+  },
+  "ModerationSearchForm": {
+    "artist": "Artist",
+    "project": "Project",
+    "asc": "Ascending",
+    "desc": "Descending"
+  },
+  "ModerationArtistCard": {
+    "artist": "Artist",
+    "bio": "Bio",
+    "updated": "Send to moderation",
+    "unknownName": "Unknown name"
+  },
+  "ModerationProjectCard": {
+    "description": "Description",
+    "updated": "Send to moderation"
+  },
+  "ModerationSendMessageForm": {
+    "messageFieldLabel": "Message to artist",
+    "messageFieldSubtitle": "Required if request is denied",
+    "backLink": "Back to list",
+    "approveButton": "Approve",
+    "denyButton": "Deny"
+  },
+  "GuideForm": {
+    "title": "Title",
+    "description": "Description",
+    "file": "File",
+    "link": "Link",
+    "order": "Sort Order",
+    "useLinkInsteadOfFile": "Use Link instead of File",
+    "uploadFile": "Upload File",
+    "removeFile": "Remove File",
+    "create": "Create Guide",
+    "update": "Update Guide",
+    "cancel": "Cancel",
+    "saving": "Saving...",
+    "guideCreated": "Guide created successfully",
+    "guideUpdated": "Guide updated successfully",
+    "errorTitle": "Error",
+    "errorDesc": "Something went wrong"
+  },
+  "GuideCard": {
+    "editButton": "Edit",
+    "deleteButton": "Delete"
+  },
+  "StaticPageForm": {
+    "slug": "Slug",
+    "menuTitle": "Menu Title",
+    "menuTitleDesc": "If provided, the page will be added to the main menu",
+    "order": "Sort order",
+    "content": "Content",
+    "fullUrl": "Full URL",
+    "submit": "Create Page",
+    "save": "Save Changes",
+    "deleteLabel": "Delete Page",
+    "deleteConfirm": "Are you sure you want to delete this page?",
+    "deleteYes": "Yes, delete",
+    "deleteCancel": "No, cancel",
+    "goBack": "Back to List",
+    "saveError": "Failed to save the page",
+    "saveErrorDesc": "An error occurred while saving. Please try again."
+  },
+  "DefaultAttachmentView": {
+    "type": "Attachment type"
+  },
+  "AttachmentViewList": {
+    "attachments": "Attachments"
+  },
+  "ArtistLockUnlockButton": {
+    "lockLabel": "Lock artist",
+    "lockConfirm": "Yes, lock",
+    "lockCancel": "No, don't lock",
+    "successfullyLock": "The artist is successfully locked",
+    "successfullyLockDesc": "You can find artist in menu \"Manage Users\"",
+    "unlockLabel": "Unlock artist",
+    "unlockConfirm": "Yes, unlock",
+    "unlockCancel": "No, don't unlock",
+    "successfullyUnlock": "The artist is successfully unlocked"
+  },
+  "ArtistsSearchForm": {
+    "hideFilter": "Hide filters",
+    "showFilter": "Show filters"
+  },
+  "BlockedArtistCard": {
+    "artistUnblocked": "Artist successfully unblocked",
+    "viewProfile": "View Full Profile",
+    "restore": "Restore",
+    "restoreCancel": "No",
+    "restoreConfirm": "Yes, unblock this artist"
+  },
+  "ArtistAdminMarkSelect": {
+    "successfullyAdminMark": "Successfully admin mark was updated"
+  },
+  "ExpandableText": {
+    "showMore": "Show more",
+    "collapse": "Collapse"
+  },
+  "ArtistSendToModerationButton": {
+    "sendToModerationButton": "Send to Moderation"
+  },
+  "ProviderOverviewCard": {
+    "title": "Providers Overview",
+    "registeredProvidersCount": "Number of registered Providers:",
+    "opportunitiesCount": "Total number of Opportunities on the platform:",
+    "averageOpportunities": "Average number of Opportunities per Provider:",
+    "opportunitiesByType": "Number of Opportunities by type:",
+    "providerInvitesCount": "Number of Provider invitations:"
+  },
+  "ArtistOverviewCard": {
+    "title": "Artists Overview",
+    "registeredArtistsCount": "Number of registered Artists:",
+    "projectsCount": "Total number of projects:",
+    "averageProjects": "Average number of projects per artist:",
+    "openApplicationsCount": "Number of currently open applications",
+    "submittedApplications": "Number of submitted applications:",
+    "artistsByIndustry": "Artists by Industry:",
+    "artistsByCountry": "Artists by Country:",
+    "newRegistrationsTitle": "Number of new registrations:",
+    "newRegistrations": "New registrations for this month: {registrationCount}\n",
+    "newRegistrationsPercentageChange": "{percentageChange}% of the previous month"
+  },
+  "BarChart": {
+    "label": "Count"
+  },
+  "GuideList": {
+    "guides": "Guides",
+    "showGuides": "Show guides",
+    "hideGuides": "Hide guides"
+  },
+  "CreateApplicationButton": {
+    "title": "Apply"
+  }
+}

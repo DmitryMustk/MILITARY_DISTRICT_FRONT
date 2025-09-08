@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "news" ALTER COLUMN "text" SET DATA TYPE TEXT;

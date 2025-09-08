@@ -1,0 +1,249 @@
+{
+  "HomePage": {
+    "title": "ЮЖНЫЙ ВОЕННЫЙ ОКРУГ",
+    "description": "Единая цифровая платформа Южного военного округа, обеспечивающая доступ к информации о структуре, силах, технике, инфраструктуре и кадровом составе.",
+    "description1": "Оперативность. Достоверность. Безопасность.",
+    "opportunities": "Explore Opportunities",
+    "artists": "Explore Artists"
+  },
+  "ArtistsPage": {
+    "artists": "Artists",
+    "viewYourProfile": "View Your Full Profile",
+    "viewProfile": "View Full Profile",
+    "invite": "Invite",
+    "noArtists": "No artists are currently registered. Check back later or follow updates in the \"News\" section to discover new artists and their projects!",
+    "noArtistsFiltered": "No artists match your filters. Adjust or clear them to explore more options.",
+    "noProjects": "No projects are currently available. Check back later or follow updates in the \"News\" section to discover new projects from artists!",
+    "noProjectsFiltered": "No projects match your filters. Adjust or clear them to explore more options."
+  },
+  "MyArtistProjectsPage": {
+    "projects": "Projects",
+    "projectsDescription": "The Artist's Current and Past Projects",
+    "projectsNotFound": "No Projects Found for This Artist",
+    "goProfile": "Profile",
+    "addProject": "Add a Project"
+  },
+  "UserRegistrationPage": {
+    "completeRegistration": "Please complete your registration"
+  },
+  "ForgotPasswordPage": {
+    "title": "Password Recovery",
+    "description": "Enter your email, and we will send you instructions to reset your password."
+  },
+  "ResetPasswordPage": {
+    "title": "Reset Your Password"
+  },
+  "ArtistProjectsPage": {
+    "projects": "Projects",
+    "projectsDescription": "The Artist's Current and Past Projects",
+    "projectsNotFound": "No Projects Found for This Artist",
+    "goProfile": "Profile",
+    "banButton": "Ban",
+    "bannedToast": "Banned"
+  },
+  "OpportunitiesPage": {
+    "availableOpportunities": "Available Opportunities",
+    "apply": "Apply",
+    "reject": "Reject",
+    "cancelRejection": "Cancel Rejection",
+    "ban": "Ban",
+    "bannedToast": "Banned",
+    "noOpportunities": "No opportunities available now. Opportunity Providers are adding new ones soon. Check back later or follow updates in the \"News\" section!",
+    "noOpportunitiesFiltered": "No opportunities match your filters. Adjust or clear them to explore more options."
+  },
+  "OpportunityApplicationsPage": {
+    "myApplication": "My Applications",
+    "actual": "Current",
+    "new": "New",
+    "sent": "Sent",
+    "shortlisted": "Shortlisted",
+    "underConsideration": "Under Consideration",
+    "archived": "Archived",
+    "archivedByArtist": "My Archive",
+    "rejected": "Rejected",
+    "draftProfileWarning": "Your profile must be submitted for moderation before your applications are visible to providers",
+    "profileOnModerationWarning": "Your profile is awaiting moderator approval before your applications become visible to providers"
+  },
+  "EditOpportunityApplicationPage": {
+    "youApplyingTo": "You Are Applying To"
+  },
+  "OpportunityApplicationPage": {
+    "youApplyingTo": "You Are Applying To",
+    "tooMuchApplications": "Sorry, your application limit has been exceeded."
+  },
+  "OpportunityInvitesOpportunityPage": {
+    "noInvitesFound": "No Invites Found",
+    "inviteArtists": "Invite Artists",
+    "inviteUnregisteredArtists": "Invite Unregistered Artists"
+  },
+  "UsersManagementPage": {
+    "header": "Manage Users",
+    "locked": "Locked",
+    "active": "Active",
+    "details": "View Details"
+  },
+  "UserPage": {
+    "backUsers": "Back to Users",
+    "artistDetails": "Artist Details",
+    "providerDetails": "Provider Details"
+  },
+  "MyOpportunitiesPage": {
+    "header": "My Opportunities",
+    "update": "Update",
+    "invite": "Invite",
+    "createOpportunity": "Create a New Opportunity",
+    "applications": "Applications",
+    "inviteWarning": "Opportunity invite is disabled. The opportunity must be visible, not banned, and have a valid application deadline."
+  },
+  "AddOpportunityPage": {
+    "addOpportunity": "Add Opportunity"
+  },
+  "EditOpportunityPage": {
+    "updateOpportunity": "Update Opportunity"
+  },
+  "ProviderProfilePage": {
+    "myProfile": "My Profile",
+    "updatePassword": "Update Password"
+  },
+  "AccountSettingsPage": {
+    "header": "Account Settings",
+    "updatePassword": "Update Password",
+    "updateEmail": "Update Email"
+  },
+  "NotFound": {
+    "notFound": "Not Found",
+    "failedLoadResource": "Could not find the requested resource.",
+    "returnHome": "Return Home"
+  },
+  "Forbidden": {
+    "forbidden": "Forbidden",
+    "youNotAuthorized": "You are not authorized to access this resource.",
+    "returnHome": "Return Home"
+  },
+  "Error": {
+    "errorOccurred": "An Error Occurred",
+    "tryAgainOrContactSupport": "Please try again",
+    "tryAgain": "Try Again",
+    "returnHome": "Return Home"
+  },
+  "ChangeProfileArtistPage": {
+    "updateProfile": "Update Profile"
+  },
+  "ChangePasswordArtistPage": {
+    "updatePassword": "Update Password"
+  },
+  "UpdatePasswordPage": {
+    "updatePassword": "Update Password"
+  },
+  "UpdateEmailPage": {
+    "updateEmail": "Update Email"
+  },
+  "EmailVerificationPage": {
+    "title": "Email Verification",
+    "desc": "To complete the email change, please verify your new email address.",
+    "successTitle": "Email Successfully Changed",
+    "successDesc": "Your email has been successfully changed.",
+    "errorTitle": "Error",
+    "errorDesc": "Failed to verify email: {error}",
+    "pendingText": "Verifying...",
+    "buttonText": "Verify Email"
+  },
+  "ProviderOpportunityApplicationsPage": {
+    "opportunityApplications": "Opportunity Applications"
+  },
+  "ProviderInvitationsPage": {
+    "header": "Active Invitations"
+  },
+  "ArtistsInvitesPage": {
+    "invites": "Invites"
+  },
+  "NewsPage": {
+    "news": "Manage News",
+    "createNews": "Create News",
+    "published": "Published",
+    "atHome": "At Home Page",
+    "edit": "Edit",
+    "preview": "Preview",
+    "noimage": "No Image"
+  },
+  "CreateNewsPage": { "createNews": "Create News", "backToNewsList": "Cancel" },
+  "PublicNewsPage": {
+    "title": "News and Updates",
+    "description": "ASA offers a treasury of resources for the vibrant and curiosity-driven artists who call Armenia their home.",
+    "noNews": "No news is available at the moment. Check back later for updates from ASA and the creative community!"
+  },
+  "PublicNewsDetailsPage": {
+    "home": "Back to Home",
+    "news": "Back to News",
+    "managers": "Back to List"
+  },
+  "BannedArtistsPage": {
+    "blockedArtists": "Blocked Artists",
+    "restore": "Restore",
+    "viewProfile": "View Full Profile",
+    "noBlockedArtists": "No blocked artists. To block someone, go to the <link>My Applications</link> page."
+  },
+  "BannedOpportunitiesPage": {
+    "header": "Banned Opportunities",
+    "restore": "Restore"
+  },
+  "BannedProjectsPage": {
+    "header": "Banned Projects",
+    "restore": "Restore"
+  },
+  "AuthErrorPage": {
+    "returnSignIn": "Return to Sign-In Page",
+    "errorOccurred": "An Error Occurred",
+    "tryAgainOrContactSupport": "Please try again"
+  },
+  "OpportunityInvitesArtistPage": {
+    "addOpportunityInvite": "Add Opportunity Invite",
+    "noInvitesFound": "No Invites Found",
+    "backArtists": "Back to Artists"
+  },
+  "ArtistOpportunityCreateInvitesPage": {
+    "unknown": "Unknown Artist Name"
+  },
+  "ModerationPage": {
+    "pageTitle": "Available Moderation Requests"
+  },
+  "ModerationArtistPage": {
+    "pageTitle": "Artist Info"
+  },
+  "ModerationProjectPage": {
+    "pageTitle": "Project Info"
+  },
+  "GuidesPage": {
+    "pageTitle": "Manage Guides",
+    "createButton": "Create Guide"
+  },
+  "CreateGuidePage": {
+    "createGuide": "Create Guide"
+  },
+  "EditGuidePage": {
+    "editGuide": "Edit Guide",
+    "backToGuidesList": "Cancel"
+  },
+  "StaticPagesPage": {
+    "pageTitle": "Manage Static Pages",
+    "createButton": "Create Static Page",
+    "noPages": "No Static Pages Found",
+    "preview": "Preview",
+    "editButton": "Edit"
+  },
+  "CreateStaticPagePage": {
+    "pageTitle": "Create Static Page"
+  },
+  "EditStaticPagePage": {
+    "pageTitle": "Edit Static Page"
+  },
+  "PublicStaticPageDetailsPage": {
+    "noContent": "No Content Available",
+    "backLink": "Back to list"
+  },
+  "SignInPage": {
+    "title": "Login to your account",
+    "or": "OR",
+    "accountNeed": "Need an account?"
+  }
+}

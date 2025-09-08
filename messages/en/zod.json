@@ -1,0 +1,203 @@
+{
+  "signInFormSchema": { "usernameRequired": "Username is required", "passwordRequired": "Password is required" },
+  "projectFormSchema": {
+    "descriptionMaxLen": "Description must be shorter than {maxLen} characters",
+    "descriptionRequired": "Description is required",
+    "titleMaxLen": "Title must be shorter than {maxLen} characters",
+    "titleRequired": "Title is required",
+    "tagRequired": "Tag is required",
+    "tagMaxLen": "Tag must be shorter than {maxLen} characters",
+    "expectedReachPositive": "Expected reach must be a positive number",
+    "budgetPositive": "Budget must be a positive number",
+    "linkMaxLen": "Link must be shorter than or equal to {maxLen} characters"
+  },
+  "guideFormSchema": {
+    "titleMaxLen": "Title must be shorter than {maxLen} characters",
+    "titleRequired": "Title is required",
+    "fileRequired": "File is required for guide type 'File'",
+    "linkRequired": "Link is required for guide type 'Link'",
+    "description": "Description",
+    "order": "Sorting Order",
+    "resourceType": "Resource Type",
+    "file": "File",
+    "link": "Link",
+    "create": "Create",
+    "update": "Update"
+  },
+  "artistInvitationSchema": {
+    "invalidEmail": "Must be a valid email",
+    "emailMaxLen": "Email must be shorter than {maxLen} characters"
+  },
+  "artistRegistrationFormSchema": {
+    "firstNameMaxLen": "First name must be shorter than or equal to {maxLen} characters",
+    "lastNameMaxLen": "Last name must be shorter than or equal to {maxLen} characters",
+    "bioMaxLen": "Bio must be shorter than or equal to {maxLen} characters",
+    "phoneMaxLen": "Phone number must be shorter than or equal to {maxLen} characters",
+    "invalidPhone": "Invalid phone number",
+    "countryMaxLen": "Country must be shorter than or equal to {maxLen} characters",
+    "industryMaxLen": "Industry must be shorter than or equal to {maxLen} characters",
+    "titleMaxLen": "Title must be shorter than or equal to {maxLen} characters",
+    "linkMaxLen": "Link must be shorter than or equal to {maxLen} characters",
+    "passwordMaxLen": "Password must be shorter than or equal to {maxLen} characters",
+    "passwordMinLen": "Password must be at least {minLen} characters",
+    "passwordsDoNotMatch": "Passwords don't match",
+    "usernameMaxLen": "Username must be shorter than or equal to {maxLen} characters",
+    "usernameMinLen": "Username must be at least {minLen} characters",
+    "artistNameMaxLen": "Artist name must be shorter than or equal to {maxLen} characters",
+    "themeMaxLen": "Theme must be shorter than or equal to {maxLen} characters",
+    "statementMaxValue": "Statement must be shorter than or equal to {maxLen} characters",
+    "birthDayMin": "Date of birth is too early",
+    "birthDayMax": "Date of birth is too recent"
+  },
+  "artistRegistrationOAuthFormSchema": {
+    "firstNameMaxLen": "First name must be shorter than or equal to {maxLen} characters",
+    "lastNameMaxLen": "Last name must be shorter than or equal to {maxLen} characters",
+    "bioMaxLen": "Bio must be shorter than or equal to {maxLen} characters",
+    "phoneMaxLen": "Phone number must be shorter than or equal to {maxLen} characters",
+    "invalidPhone": "Invalid phone number",
+    "countryMaxLen": "Country must be shorter than or equal to {maxLen} characters",
+    "industryMaxLen": "Industry must be shorter than or equal to {maxLen} characters",
+    "titleMaxLen": "Title must be shorter than or equal to {maxLen} characters",
+    "linkMaxLen": "Link must be shorter than or equal to {maxLen} characters",
+    "usernameMaxLen": "Username must be shorter than or equal to {maxLen} characters",
+    "usernameMinLen": "Username must be at least {minLen} characters",
+    "artistNameMaxLen": "Artist name must be shorter than or equal to {maxLen} characters",
+    "themeMaxLen": "Theme must be shorter than or equal to {maxLen} characters",
+    "statementMaxValue": "Statement must be shorter than or equal to {maxLen} characters",
+    "birthDayMin": "Date of birth is too early",
+    "birthDayMax": "Date of birth is too recent"
+  },
+  "artistProfileFormSchema": {
+    "firstNameMaxLen": "First name must be shorter than or equal to {maxLen} characters",
+    "lastNameMaxLen": "Last name must be shorter than or equal to {maxLen} characters",
+    "bioMaxLen": "Bio must be shorter than or equal to {maxLen} characters",
+    "phoneMaxLen": "Phone number must be shorter than or equal to {maxLen} characters",
+    "invalidPhone": "Invalid phone number",
+    "countryMaxLen": "Country must be shorter than or equal to {maxLen} characters",
+    "industryMaxLen": "Industry must be shorter than or equal to {maxLen} characters",
+    "titleMaxLen": "Title must be shorter than or equal to {maxLen} characters",
+    "linkMaxLen": "Link must be shorter than or equal to {maxLen} characters",
+    "artistNameMaxLen": "Artist name must be shorter than or equal to {maxLen} characters",
+    "themeMaxLen": "Theme must be shorter than or equal to {maxLen} characters",
+    "statementMaxValue": "Statement must be shorter than or equal to {maxLen} characters",
+    "birthDayMin": "Date of birth is too early",
+    "birthDayMax": "Date of birth is too recent"
+  },
+  "userPasswordFormSchema": {
+    "passwordMaxLen": "Password must be shorter than or equal to {maxLen} characters",
+    "passwordMinLen": "Password must be at least {minLen} characters",
+    "passwordsDoNotMatch": "Passwords don't match"
+  },
+  "resetPasswordFormSchema": {
+    "passwordMaxLen": "Password must be shorter than or equal to {maxLen} characters",
+    "passwordMinLen": "Password must be at least {minLen} characters",
+    "passwordsDoNotMatch": "Passwords don't match"
+  },
+  "updateEmailSchema": {
+    "emailInvalid": "Must be a valid email",
+    "emailRequired": "Email is required",
+    "emailMaxLen": "Email must be shorter than {maxLen} characters",
+    "emailBusy": "Email already registered",
+    "emailRequestExist": "Confirmation link already sent to this email address"
+  },
+  "opportunityFormSchema": {
+    "titleRequired": "Title is required",
+    "titleMaxLen": "Title must be shorter than {maxLen} characters",
+    "descriptionRequired": "Description is required",
+    "descriptionMaxLen":"Description must be shorter than {maxLen} characters",
+    "themeDescriptionMaxLen":"Theme description must be shorter than {maxLen} characters",
+    "applicationDeadlineRequired": "Application deadline is required",
+    "residencyTimeRequired": "Residency time is required",
+    "opportunityTypeRequired": "Opportunity type is required",
+    "opportunityVisibilityRequired": "Opportunity visibility is required",
+    "amountEmptyOrPositive": "Amount must be empty or a positive whole number",
+    "amountPositive": "Amount must be positive whole number",
+    "minAmountGreaterMaxAmount": "Minimum amount must not exceed maximum amount",
+    "ageEmptyOrPositive": "Age must be empty or a positive whole number",
+    "attachmentTypeMaxLen": "Attachment type must be shorter than or equal to {maxLen} characters"
+  },
+  "opportunityApplicationFormSchema": {
+    "messageRequired": "Message is required",
+    "messageMaxLen":"Message must be shorter than {maxLen} characters",
+    "attachmentTypeMaxLen": "Attachment type must be shorter than or equal to {maxLen} characters"
+  },
+  "providerProfileFormSchema": {
+    "organizationNameRequired": "Organization name is required",
+    "organizationNameMaxLen": "Organization name must be shorter than {maxLen} characters",
+    "representativeNameRequired": "Representative name is required",
+    "representativeNameMaxLen": "Representative name must be shorter than {maxLen} characters",
+    "websitesMaxLen": "Website URL must be shorter than {maxLen} characters",
+    "informationRequired": "Information is required",
+    "informationMaxLen": "Information must be shorter than {maxLen} characters",
+    "phoneRequired": "Phone is required",
+    "phoneMaxLen": "Phone number must be shorter than {maxLen} characters",
+    "invalidPhone": "Invalid phone number"
+  },
+  "providerRegistrationFormSchema": {
+    "passwordMaxLen": "Password must be shorter than {maxLen} characters",
+    "passwordMinLen": "Password must be at least {minLen} characters",
+    "passwordsDoNotMatch": "Passwords don't match",
+    "usernameMaxLen": "Username must be shorter than {maxLen} characters",
+    "usernameMinLen": "Username must be at least {minLen} characters",
+    "organizationNameRequired": "Organization name is required",
+    "organizationNameMaxLen": "Organization name must be shorter than {maxLen} characters",
+    "representativeNameRequired": "Representative name is required",
+    "representativeNameMaxLen": "Representative name must be shorter than {maxLen} characters",
+    "websitesMaxLen": "Website URL must be shorter than {maxLen} characters",
+    "informationRequired": "Information is required",
+    "emailInvalid": "Invalid email format",
+    "emailRequired": "Email is required",
+    "emailMaxLen": "Email must be shorter than {maxLen} characters",
+    "phoneRequired": "Phone is required",
+    "phoneMaxLen": "Phone number must be shorter than {maxLen} characters",
+    "usernameUnique": "Username already exists",
+    "invalidPhone":"Invalid phone number"
+  },
+  "providerRegistrationRequestFormSchema": {
+    "emailInvalid": "Invalid email format",
+    "emailRequired": "Email is required",
+    "emailMaxLen": "Email must be shorter than {maxLen} characters",
+    "phoneMaxLen": "Phone number must be shorter than {maxLen} characters",
+    "representativeNameMaxLen": "Representative name must be shorter than {maxLen} characters",
+    "organizationNameMaxLen": "Organization name must be shorter than {maxLen} characters",
+    "informationRequired": "Information is required"
+  },
+  "userInvitationFormSchema": {
+    "emailInvalid": "Invalid email format",
+    "emailRequired": "Email is required",
+    "emailMaxLen": "Email must be shorter than {maxLen} characters",
+    "emailBusy": "Email already registered",
+    "organizationNameRequired": "Organization name is required",
+    "organizationNameMaxLen": "Organization name must be shorter than {maxLen} characters",
+    "rolesRequired": "At least one role must be selected",
+    "messageSubjectMaxLen": "Message subject must be shorter than {maxLen} characters",
+    "messageSubjectRequiredIfMultipleRoles": "Message subject is required when selecting multiple roles",
+    "messageMaxLen": "Message must be shorter than {maxLen} characters",
+    "messageRequiredIfMultipleRoles": "Message is required when selecting multiple roles"
+  },
+  "forgotPasswordFormSchema": {
+    "emailInvalid": "Invalid email address",
+    "emailRequired": "Email is required",
+    "emailMaxLen": "Email must be shorter than {maxLen} characters",
+    "emailNotRegistered": "This email is not registered or hasn't been verified"
+  },
+  "unregisteredArtistInviteFormSchema": {
+    "messageMaxLen": "Message must be shorter than {maxLen} characters",
+    "selectInvite": "Select at least one invitation",
+    "invalidEmail": "Must be a valid email",
+    "emailMaxLen": "Email must be shorter than {maxLen} characters",
+    "emailUnique": "Emails must be unique",
+    "subjectMaxLen": "Subject must be shorter than {maxLen} characters"
+  },
+  "newsFormSchema": {
+    "titleRequired": "Title is required",
+    "dateRequired": "Date is required"
+  },
+  "staticPageFormSchema": {
+    "slugRequired": "Slug is required",
+    "orderInvalid": "Sort order must be a valid integer",
+    "slugMaxLen": "Slug must be shorter than {maxLen} characters",
+    "titleMaxLen": "Title must be shorter than {maxLen} characters",
+    "slugUnique": "A page with this slug already exists"
+  }
+}
